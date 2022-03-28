@@ -1,8 +1,15 @@
 .app {
     width: 100%;
-    height: 100%;
-    background-color: #ccc;
+    min-height: 100%;
+    background-color: #1e1e1e;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    max-width: 1200px;
+    background-color: #353537;
+    padding: 50px 50px;
 }

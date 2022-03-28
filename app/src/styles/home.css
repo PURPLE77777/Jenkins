@@ -1,0 +1,20 @@
+.home {
+    height: 100%;
+}
+.home-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #c5c5c5;
+}
+.home-title {
+    color: white;
+    font-size: 40pt;
+}
+.home-text {
+    margin: 0px 100px;
+    font-size: 26pt;
+    text-align: center;
+}

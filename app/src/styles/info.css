@@ -1,0 +1,23 @@
+.info {
+}
+
+.some-info {
+    margin: 50px 0px 0px 0px;
+}
+.some-info:first-child {
+    margin: 0px;
+}
+
+.some-info_title {
+    font-size: 40pt;
+    text-decoration: underline;
+    color: white;
+    margin: 0px;
+}
+
+.some-info_text {
+    display: block;
+    color: #c5c5c5;
+    font-size: 30pt;
+    margin-top: 50px;
+}

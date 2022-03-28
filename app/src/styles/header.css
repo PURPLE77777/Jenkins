@@ -1,0 +1,82 @@
+.header-wrap {
+    width: 100%;
+    background-color: #424242;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px 100px;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 20px 0px 20px 0px;
+    background: url("../img/jenkins.png") center no-repeat;
+    background-size: contain;
+}
+
+.actions {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.login {
+}
+.login-link {
+    text-decoration: none;
+    color: #c5c5c5;
+    font-size: 24pt;
+}
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.username-container {
+    display: none;
+    color: #c5c5c5;
+    font-size: 24pt;
+}
+.username {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    font-size: inherit;
+}
+.username:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    margin-left: 30px;
+    height: 100%;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0px;
+    margin: 0px;
+    height: inherit;
+}
+
+.menu-item {
+    box-sizing: border-box;
+}
+.menu-item:hover {
+    background-color: #585858;
+}
+.menu-item a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    text-decoration: none;
+    color: #c5c5c5;
+    font-size: 24pt;
+    padding: 0px 20px;
+}
