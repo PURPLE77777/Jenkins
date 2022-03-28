@@ -1,0 +1,38 @@
+.profile {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.profile-title {
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+.my-info {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 40px;
+}
+
+.my-img {
+    width: 250px;
+    height: 250px;
+    background: url("../img/noname.png") center no-repeat;
+    background-size: contain;
+}
+
+.data-list {
+    font-size: 20pt;
+    color: #c5c5c5;
+    margin: 0px;
+    padding: 0px;
+}
+
+.data-item {
+    font-size: 20pt;
+    color: #c5c5c5;
+    margin-left: 30px;
+}

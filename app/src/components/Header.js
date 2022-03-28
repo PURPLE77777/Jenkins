@@ -1,24 +1,30 @@
 import React from "react";
 import "../styles/header.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+    const username = useSelector((state) => state.loginReducer.userName);
+
     return (
         <div className="header-wrap">
             <Link to="/" className="logo"></Link>
             <div className="actions">
-                <div className="login">
-                    <Link to="/login" className="login-link">
-                        Log in
-                    </Link>
-                </div>
-                <div className="username-container">
-                    Hello,{" "}
-                    <Link to="/profile" className="username">
-                        username
-                    </Link>
-                    !
-                </div>
+                {username ? (
+                    <div className="username-container username-show">
+                        Hello,{" "}
+                        <Link to="/profile" className="username">
+                            {username}
+                        </Link>
+                        !
+                    </div>
+                ) : (
+                    <div className="login">
+                        <Link to="/login" className="login-link">
+                            Log in
+                        </Link>
+                    </div>
+                )}
                 <div className="menu">
                     <ul className="menu-list">
                         <li className="menu-item">

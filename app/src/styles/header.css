@@ -23,8 +23,6 @@
     align-items: center;
 }
 
-.login {
-}
 .login-link {
     text-decoration: none;
     color: #c5c5c5;
@@ -44,9 +42,13 @@
     font-weight: bold;
     color: inherit;
     font-size: inherit;
+    font-weight: bold;
 }
 .username:hover {
     text-decoration: underline;
+}
+.username-show {
+    display: block;
 }
 
 .menu {
