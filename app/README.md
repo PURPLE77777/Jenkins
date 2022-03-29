@@ -1,3 +1,12 @@
+# Описание
+
+Выделение строк таблицы происходит по клику строки
+
+Редактирование ячеек таблицы осуществляется двойным кликом по нужной ячейке,
+вводите нужные данные и нажимите клавишу Enter. В случае если во время редактирования
+решили отменить изменения, то вместо Enter нажмите на клавишу Escape (Esc), тогда
+ячейка не будет изменена.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
