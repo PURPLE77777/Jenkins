@@ -30,12 +30,20 @@ function Header() {
                         <li className="menu-item">
                             <Link to="/">HOME</Link>
                         </li>
-                        <li className="menu-item">
-                            <Link to="/table">TABLE</Link>
-                        </li>
-                        <li className="menu-item">
-                            <Link to="/info">ABOUT</Link>
-                        </li>
+                        {username ? (
+                            <>
+                                <li className="menu-item">
+                                    <Link to="/table">TABLE</Link>
+                                </li>
+                                <li className="menu-item">
+                                    <Link to="/info">ABOUT</Link>
+                                </li>
+                            </>
+                        ) : (
+                            <li className="menu-item">
+                                <Link to="/info">ABOUT</Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>

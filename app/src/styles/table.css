@@ -1,0 +1,83 @@
+.count_selected_rows,
+.count_rows {
+    font-size: 24pt;
+    color: #c5c5c5;
+}
+
+.table-notebooks {
+    display: block;
+    width: 800px;
+    height: 500px;
+    display: block;
+    padding: 2px;
+    user-select: none;
+    overflow-x: auto;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+th,
+td {
+    font-size: 24pt;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 2px solid #c5c5c5;
+}
+
+th {
+    background-color: #5c5c5c;
+    color: white;
+}
+
+td {
+    position: relative;
+    color: #c5c5c5;
+}
+
+.td_input {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #c5c5c5;
+    background-color: #1e1e1e;
+    height: 100%;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 24pt;
+    display: none;
+}
+.show_input {
+    display: block;
+}
+
+td span {
+    display: inline-block;
+}
+
+thead {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+.row:hover {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    outline: 5px solid yellow;
+}
+
+.row th {
+    position: sticky;
+    left: 0px;
+    z-index: 1;
+    outline: 2px solid #c5c5c5;
+    border: 2px solid #c5c5c5;
+}
+
+.selected-row {
+    background-color: green;
+}

@@ -1,0 +1,63 @@
+{
+    "notebooks": [
+        {
+            "name": "Lenovo",
+            "resolution": "1920x1080",
+            "year": 2022,
+            "memory": "512 Gb",
+            "screen": "15.6\"",
+            "RAM": "8192 Mh",
+            "disk": "SSD",
+            "CPU frequency": "2100 Мh"
+        },
+        {
+            "name": "Asus",
+            "resolution": "1920x1080",
+            "year": 2021,
+            "memory": "512 Gb",
+            "screen": "15.6\"",
+            "RAM": "16384 Mh",
+            "disk": "SSD",
+            "CPU frequency": "1800 Мh"
+        },
+        {
+            "name": "Macbook",
+            "resolution": "2560x1600",
+            "year": 2021,
+            "memory": "1024 Gb",
+            "screen": "17.1\"",
+            "RAM": "8192 Mh",
+            "disk": "HDD",
+            "CPU frequency": "2900 Mh"
+        },
+        {
+            "name": "HP",
+            "resolution": "1920x1080",
+            "year": 2020,
+            "memory": "1024 Gb",
+            "screen": "15.6\"",
+            "RAM": "8192 Mh",
+            "disk": "HDD",
+            "CPU frequency": "2100 Mh"
+        },
+        {
+            "name": "Huawei",
+            "resolution": "2560x1600",
+            "year": 2021,
+            "memory": "512 Gb",
+            "screen": "17.3\"",
+            "RAM": "16384 Mh",
+            "disk": "SSD",
+            "CPU frequency": "2300 Mh"
+        }
+    ],
+    "parameters": [
+        "Resolution",
+        "Year",
+        "Memory",
+        "Screen",
+        "RAM",
+        "Disk",
+        "CPU frequency"
+    ]
+}
