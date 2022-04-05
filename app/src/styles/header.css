@@ -26,7 +26,7 @@
 .login-link {
     text-decoration: none;
     color: #c5c5c5;
-    font-size: 24pt;
+    font-size: 20pt;
 }
 .login-link:hover {
     text-decoration: underline;
@@ -35,7 +35,7 @@
 .username-container {
     display: none;
     color: #c5c5c5;
-    font-size: 24pt;
+    font-size: 20pt;
 }
 .username {
     text-decoration: none;

@@ -19,7 +19,7 @@ function Login() {
     };
 
     const checkPass = (value) => {
-        const regexp = /\d{5,16}/gm;
+        const regexp = /^[\d]{7,16}$/gm;
         if (regexp.test(value)) {
             setPassword(true);
         } else {
@@ -47,7 +47,7 @@ function Login() {
                     className={
                         username === false ? "error display-error" : "error"
                     }>
-                    Username is incorrect (must contain from 5 to 16 letters)
+                    Username is incorrect (must contain from 5 to 12 letters)
                 </span>
                 <label className='login_label'>Password:</label>
                 <input
@@ -60,7 +60,7 @@ function Login() {
                     className={
                         password === false ? "error display-error" : "error"
                     }>
-                    Password is incorrect (must contain from 5 to 16 numbers)
+                    Password is incorrect (must contain from 7 to 16 numbers)
                 </span>
                 <div className='btn-container'>
                     <button
