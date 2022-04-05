@@ -10,9 +10,9 @@
 
 .logo {
     display: block;
-    width: 80px;
-    height: 80px;
-    padding: 20px 0px 20px 0px;
+    width: 70px;
+    height: 70px;
+    padding: 10px 0px 10px 0px;
     background: url("../img/jenkins.png") center no-repeat;
     background-size: contain;
 }
@@ -79,6 +79,6 @@
     height: 100%;
     text-decoration: none;
     color: #c5c5c5;
-    font-size: 24pt;
+    font-size: 20pt;
     padding: 0px 20px;
 }

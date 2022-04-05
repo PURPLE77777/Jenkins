@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    height: 100px;
+    height: 70px;
 }
 
 .footer-menu {
@@ -37,6 +37,6 @@
     height: 100%;
     text-decoration: none;
     color: #c5c5c5;
-    font-size: 24pt;
+    font-size: 20pt;
     padding: 0px 20px;
 }

@@ -13,31 +13,33 @@ function Table() {
     const countRows = notebooks.length;
 
     const selectRow = (e) => {
-        e.stopPropagation();
-        e.currentTarget.classList.toggle("selected-row");
+        e.currentTarget.parentNode.classList.toggle("selected-row");
+        e.currentTarget.classList.toggle("selected-hd");
         let rows = document.getElementsByClassName("selected-row");
         setSelectedRows(rows.length);
     };
 
-    const stopPropag = (e) => {
-        e.stopPropagation();
+    const acceptChanges = () => {
+        let input = document.getElementsByClassName("show_input")[0];
+        input.classList.remove("show_input");
+        input.placeholder = input.value;
+        let span = input.previousSibling;
+        span.innerHTML = input.value;
+        input.value = "";
+        setIsEditing(false);
+    };
+    const cancelChanges = () => {
+        let input = document.getElementsByClassName("show_input")[0];
+        input.classList.remove("show_input");
+        input.value = "";
+        setIsEditing(false);
     };
 
     const changeCell = (e) => {
-        console.log(e.key);
         if (e.key === "Enter") {
-            let input = e.target;
-            input.classList.remove("show_input");
-            input.placeholder = input.value;
-            let span = input.previousSibling;
-            span.innerHTML = input.value;
-            input.value = "";
-            setIsEditing(false);
+            acceptChanges(e);
         } else if (e.key === "Escape") {
-            let input = e.target;
-            input.classList.remove("show_input");
-            input.value = "";
-            setIsEditing(false);
+            cancelChanges(e);
         }
     };
 
@@ -86,9 +88,7 @@ function Table() {
                         onScroll={() => changeTr()}>
                         <thead className='table-head'>
                             <tr className='thead_first-row'>
-                                <th className='first-th'>
-                                    {/* <div className='first-td'></div> */}
-                                </th>
+                                <th className='first-th'></th>
                                 {parameters.map((parameter) => (
                                     <th
                                         className='title-column'
@@ -100,12 +100,13 @@ function Table() {
                         </thead>
                         <tbody>
                             <tr className='tbody_first-row'></tr>
-                            {notebooks.map((notebook, index) => (
-                                <tr
-                                    className='row'
-                                    key={uniqueKey()}
-                                    onClick={(e) => selectRow(e)}>
-                                    <th key={uniqueKey()}>{notebook.name}</th>
+                            {notebooks.map((notebook) => (
+                                <tr className='row' key={uniqueKey()}>
+                                    <th
+                                        key={uniqueKey()}
+                                        onClick={(e) => selectRow(e)}>
+                                        {notebook.name}
+                                    </th>
                                     <td
                                         key={uniqueKey()}
                                         onDoubleClick={(e) => showInput(e)}>
@@ -114,7 +115,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.resolution}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -127,7 +127,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.year}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -140,7 +139,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.memory}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -153,7 +151,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.screen}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -166,7 +163,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.RAM}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -179,7 +175,6 @@ function Table() {
                                             key={uniqueKey()}
                                             placeholder={notebook.disk}
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -194,7 +189,6 @@ function Table() {
                                                 notebook["CPU frequency"]
                                             }
                                             className='td_input'
-                                            onClick={(e) => stopPropag(e)}
                                             onKeyDown={(e) =>
                                                 changeCell(e)
                                             }></input>
@@ -203,6 +197,26 @@ function Table() {
                             ))}
                         </tbody>
                     </table>
+                    {isEditing ? (
+                        <div className='btns'>
+                            <button
+                                className='btn-accept'
+                                onClick={() => {
+                                    acceptChanges();
+                                }}>
+                                Accept
+                            </button>
+                            <button
+                                className='btn-cancel'
+                                onClick={() => {
+                                    cancelChanges();
+                                }}>
+                                Cancel
+                            </button>
+                        </div>
+                    ) : (
+                        <></>
+                    )}
                 </div>
             ) : (
                 <NoAuth></NoAuth>
