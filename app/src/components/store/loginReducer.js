@@ -1,5 +1,5 @@
 const defaultState = {
-    userName: localStorage.getItem("username"),
+    userName: sessionStorage.getItem("username"),
 };
 
 const loginReducer = (state = defaultState, action) => {

@@ -1,3 +1,10 @@
+.data-table {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .count_selected_rows,
 .count_rows {
     font-size: 24pt;
@@ -6,14 +13,23 @@
 
 .table-notebooks {
     display: block;
+    position: relative;
     width: 800px;
     height: 500px;
     display: block;
-    padding: 2px;
+    /* padding: 2px; */
     user-select: none;
     overflow-x: auto;
     overflow-y: auto;
     margin-top: 10px;
+}
+
+.first-td {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 th,
@@ -57,9 +73,26 @@ td span {
     display: inline-block;
 }
 
-thead {
+.thead_first-row {
     position: sticky;
     top: 0px;
+    z-index: 3;
+}
+
+.title-column {
+    border-bottom: 2px solid #c5c5c5;
+}
+
+.tbody_first-row {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 162px;
+    height: 105.2px;
+    box-sizing: border-box;
+    background-color: #5c5c5c;
+    outline: 2px solid #c5c5c5;
+    border-right: 2px solid #c5c5c5;
     z-index: 3;
 }
 

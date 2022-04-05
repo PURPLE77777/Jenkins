@@ -1,0 +1,14 @@
+.no-auth {
+    text-align: center;
+}
+
+.no-auth-h2 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #c5c5c5;
+}
+
+.no-auth_log-in {
+    color: #fff;
+    text-decoration: underline;
+}
